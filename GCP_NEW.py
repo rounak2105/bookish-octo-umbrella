@@ -7,6 +7,7 @@ import torch
 from sentence_transformers import SentenceTransformer, util
 from flask import Flask, request, jsonify
 import gc
+import os
 
 # ---------- Step 0: Set Up CPU Device ----------
 device = torch.device("cpu")
