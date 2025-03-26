@@ -11,7 +11,7 @@ device = torch.device("cpu")
 
 # ---------- Step 1: Load the Filtered Movies JSON ----------
 print("Loading filtered movies data from 'filtered_movies.json.gz' ...")
-movies_df = pd.read_json('filtered_movies.json.gz', orient='records', lines=True, compression='gzip')
+movies_df = pd.read_json('filtered_movies.json', orient='records', lines=True)
 print(f"Loaded {len(movies_df)} movies.")
 
 # ---------- Step 2: Define Helper Functions ----------
