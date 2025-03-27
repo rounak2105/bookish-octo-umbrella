@@ -78,7 +78,7 @@ print("Loaded embeddings from file.")
 model = SentenceTransformer("all-MiniLM-L6-v2").to(device)
 
 # ---------- Step 5: Define the Recommendation Function ----------
-def get_recommendations(query, top_k=5):
+def get_recommendations(query, top_k=10):
     query_embedding = model.encode(query, convert_to_tensor=True)
     cos_scores = util.cos_sim(query_embedding, embeddings)[0]
     cos_scores = cos_scores.cpu().numpy()
